@@ -16,21 +16,23 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Ім'я"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        required
-      />
-      <input
-        type="tel"
-        placeholder="Телефон"
-        value={phone}
-        onChange={(e) => setPhone(e.target.value)}
-        required
-      />
-      <button type="submit">Додати</button>
+      <label>
+        Name:
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </label>
+      <label>
+        Phone:
+        <input
+          type="tel"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+        />
+      </label>
+      <button type="submit">Add Contact</button>
     </form>
   );
 };
